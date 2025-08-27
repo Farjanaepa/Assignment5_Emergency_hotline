@@ -9,23 +9,38 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-   <header class="flex justify-between items-center mx-auto">
-    <div class="flex justify-between items-center">
+<body class="bg-[#F5FFF6]">
+   <header class="flex flex-col sm:flex-row justify-between items-center py-5 sm:px-[60px] gap-2">
+    <div class="flex items-center gap-3">
         <img src="./assets/logo.png" alt="" class="max-w-[50px]">
         <h2 class="text-green-950 font-bold">Emergency Service</h2>
     </div>
-    <div class="flex justify-between items-center">
-        <div class="count">
+    <div class="flex items-center gap-5">
+        <div class="count p-3 flex gap-3 bg-[#41ff6b1a] rounded-[50px]">
+            <p>0</p>
             <img src="./assets/heart.png" class="max-w-[24px]" alt="">
 
         </div>
-        <div class="point">
+        <div class="point py-3 px-5 flex gap-3 bg-[#41ff6b1a] rounded-[50px]">
+            <p>100</p>
             <img src="./assets/coin.png" class="max-w-[24px]" alt="">
 
         </div>
+        <button class="btn btn-active bg-[#00a63e] rounded-[50px] px-[36px] py-[12px] text-white">Copy</button>
     </div>
    </header>
+
+   <nav class="flex flex-col items-center py-3 px-[60px] gap-3 bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223]">
+    <img src="./assets/logo.png" class="w-[92px]" alt="">
+    <h1 class="text-white font-bold text-[40px]">Emergency Service Directory</h1>
+    <p class="text-white text-[20px] pb-[21px]">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh </p>
+
+   </nav>
+
+
+   <!-- card seection -->
+
+   
     
 </body>
 </html>
