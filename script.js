@@ -22,11 +22,12 @@ for(const btn of callButton){
         alert('Calling' + name + 'at ' + number);
         coinsEl.innerText = coins - 20;
 
+        // time set
         let now = new Date();
-        let hours = now.getHours().toString();
-        let minutes = now.getMinutes().toString();
-        let seconds = now.getSeconds().toString();
-        let time = hours + ':' + minutes + ':' + seconds;
+        let time = now.toLocaleTimeString();
+
+       
+      
 
         let li = document.createElement('li');
         li.style.display= 'flex';
@@ -52,6 +53,22 @@ document.getElementById('clear-btn').addEventListener('click',function(){
     historyEl.innerHTML = '';
 });
 
+// copy button
+let copyCount = 0;
+const copyButtons = document.getElementsByClassName('copy-txt');
+
+for (const btn of copyButtons) {
+  btn.addEventListener('click', function () {
+    const card = btn.closest('.card');
+    const number = card.querySelector('.service-number').innerText;
+
+    navigator.clipboard.writeText(number);
+    copyCount++;
+    document.getElementById('copy-count').innerText = copyCount;
+
+    alert(`Number copied: ${number}`);
+  });
+}
 
 
 // count button click the love button
