@@ -7,7 +7,7 @@ for(const btn of callButton){
     btn.addEventListener('click',function() {
         let coins = parseInt(coinsEl.innerText);
         if (coins < 20) {
-            alert('you have no point to call');
+            alert('You have not enough coin, need at least 20 coin to call');
             return;
         }
 
@@ -19,7 +19,7 @@ for(const btn of callButton){
        let name = parent.getElementsByClassName('service-name')[0].innerText;
        let number = parent.getElementsByClassName('service-number')[0].innerText;
 
-        alert('Calling' + name + 'at ' + number);
+        alert('📞 Calling ' + name + ' ' + number);
         coinsEl.innerText = coins - 20;
 
         // time set
@@ -66,7 +66,7 @@ for (const btn of copyButtons) {
     copyCount++;
     document.getElementById('copy-count').innerText = copyCount;
 
-    alert(`Number copied: ${number}`);
+    alert(`Number copied : ${number}`);
   });
 }
 
